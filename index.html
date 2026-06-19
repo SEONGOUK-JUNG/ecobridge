@@ -13,6 +13,10 @@
   <meta name="google-site-verification" content="ydtxYRSE6nca3BiE01yI914HJLNY7cT3m-djZqVAOuM"/>
   <meta name="naver-site-verification" content="b82071f078e33f01c22aff705fca16664245cf7d"/>
   <link rel="canonical" href="https://www.ecobridge.biz/"/>
+  <link rel="alternate" hreflang="ko" href="https://www.ecobridge.biz/" />
+  <link rel="alternate" hreflang="en" href="https://www.ecobridge.biz/index_en.html" />
+  <link rel="alternate" hreflang="zh" href="https://www.ecobridge.biz/index_zh.html" />
+  <link rel="alternate" hreflang="x-default" href="https://www.ecobridge.biz/" />
 
   <!-- ═══ Open Graph (카카오·페이스북·링크드인 공유) ═══ -->
   <meta property="og:type" content="website"/>
@@ -142,6 +146,13 @@
     }
     .nav-links a:hover { color: var(--white); }
     .nav-right { display:flex; align-items:center; gap:20px; }
+    .lang-switch { display:flex; gap:.7rem; font-size:.78rem; font-weight:700; color: var(--dim); letter-spacing:1px; padding-right:.5rem; border-right:1px solid var(--line); }
+    .lang-switch a { color: var(--dim); text-decoration:none; transition:color .2s; }
+    .lang-switch a:hover { color: var(--green); }
+    .lang-switch a.active { color: var(--green); }
+    .m-lang { display:flex; gap:1.2rem; font-size:1rem; font-weight:700; padding-top:.8rem; }
+    .m-lang a { color: var(--mid); text-decoration:none; }
+    .m-lang a.active { color: var(--green); }
     .lang-toggle {
       font-size: 0.78rem; font-weight:600; color: var(--dim);
       cursor:pointer; letter-spacing:1px;
@@ -854,6 +865,11 @@
     <li><a href="#market">Market</a></li>
   </ul>
   <div class="nav-right">
+    <div class="lang-switch">
+      <a href="index.html" class="active">KR</a>
+      <a href="index_en.html">EN</a>
+      <a href="index_zh.html">中</a>
+    </div>
     <a href="#contact" class="nav-cta">Contact Us</a>
     <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="메뉴">
       <span></span><span></span><span></span>
@@ -869,6 +885,7 @@
   <a href="#partners" onclick="closeMenu()">Partners</a>
   <a href="#market" onclick="closeMenu()">Market</a>
   <a href="#contact" onclick="closeMenu()">Contact Us</a>
+  <div class="m-lang"><a href="index.html" class="active">KR</a><a href="index_en.html">EN</a><a href="index_zh.html">中</a></div>
 </div>
 
 <!-- ══ HERO ══ -->
